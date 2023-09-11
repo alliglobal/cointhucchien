@@ -1,13 +1,39 @@
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Space, Table } from 'antd';
 import Sparkline from "../SparklineComp/Sparkline.jsx";
 import {Avatar, Chip} from "@mui/joy";
 import "./MarketDataUI.css"
 import {FaArrowTrendDown, FaArrowTrendUp} from "react-icons/fa6";
+import { Sparklines } from 'react-sparklines';
+import SparklinesLine from "react-sparklines/src/SparklinesLine.js";
+import { useNavigate } from 'react-router-dom';
+import {ShuffleData} from "../../ToolsFunctions/SortData.jsx";
 
 
 function MarketDataUI({data}) {
+
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const navigate = useNavigate();
+
+
+    const onRowClick = (record) => {
+        navigate(`/detail/${record.id}`);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const columns = [
         {
@@ -49,19 +75,39 @@ function MarketDataUI({data}) {
                     <p className={`${record.price_change_percentage_24h < 0 ? "down" : "text-green-300"} crypto-name ml-1`}>{record.price_change_percentage_24h.toFixed(2)}%</p>
                 </div>
             ),
-            responsive: ['md'], // Hide this column on screens smaller than 'md'
+            responsive: ['md'],
         },
+
         {
             title: "Graph",
             render: (text, record) => (
-                <Sparkline data={record.sparkline_in_7d.price} />
+                <Sparklines
+                    data={record.sparkline_in_7d.price}
+                    style={{
+                        width: windowWidth < 768 ? '100%' : '100%',
+                        height: '25px',
+                        maxWidth: '100%',
+                    }}
+                >
+                    {record.price_change_percentage_24h < 0 ? (
+                        <SparklinesLine color="#FF6666" style={{ strokeWidth: 1 }} />
+                    ) : (
+                        <SparklinesLine color="#31BD64FF" style={{ strokeWidth: 1 }} />
+                    )}
+                </Sparklines>
             ),
         },
     ];
 
     return (
         <div className={"p-2"}>
-            <Table size={"small"} columns={columns} dataSource={data.map((item, index) => ({ ...item, key: index }))} />
+            <Table size={"small"} columns={columns} dataSource={data.map((item, index) => ({ ...item, key: index }))}
+
+                   onRow={(record) => ({
+                       onClick: () => onRowClick(record)
+                   })}
+                   rowClassName="cursor-pointer"
+            />
         </div>
     );
 }

@@ -7,16 +7,49 @@
     font-size: 1.1rem;
 }
 
+.news--card{
+    transition: transform 0.2s ease;
+
+}
+
+.news--card:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
 @media not all and (min-width: 1024px) {
     .margin-10{
         margin-top: -0.7em;
     }
+
+    .news--responsive{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img--responsive{
+        width: 100%;
+    }
+
+    .timestamp{
+        display: none;
+    }
+}
+
+.timestamp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(141, 141, 141, 0.1); /* Add background color for visibility */
+    color: rgba(128, 128, 128, 0.5); /* Set text color */
+    padding: 4px 8px; /* Add padding for spacing */
+    border-radius: 0 10px 0 8px; /* Add rounded corners to the top right */
+    
 }
 
 
 
 .crypto-news-card {
-    max-height: 400px; /* Adjust this value as needed */
 
     display: flex;
     flex-direction: column;

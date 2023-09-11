@@ -1,26 +1,21 @@
 
 import MarketDataUI from "./MarketDataUI.jsx";
+import {ShuffleData} from "../../ToolsFunctions/SortData.jsx";
 
-function MarketUI({cryptoDatas}){
+function MarketUI({cryptoDatas, title, randomSet}){
 
-    const currencies = [
-        "USD", "EUR", "JPY"
-    ];
+    const cryptoData = randomSet ? ShuffleData(cryptoDatas) : cryptoDatas;
 
     return (
         <div className={""}>
 
             <div className={"flex items-center justify-between"}>
-                <h1 className={"text-3xl font-bold ml-2 lg:ml-3 "}>Popular Market<span className={"text-7xl leading-3 text-blue-500"}>.</span></h1>
+                {title &&
+                    <h1 className={"text-3xl font-bold ml-2 lg:ml-3 "}>{title}<span className={"text-7xl leading-3 text-blue-500"}>.</span></h1>
 
-                <select className={"mr-3 border border-blue-500 text-blue-500 font-light lg:p-1 rounded"} style={{ outline: 'none', borderColor: '#3498db' }}>
-                        {currencies.map(currency => (
-                            <option className={"font-light text-1xl"} key={currency} value={currency} defaultValue={currency === 'usd'}>{currency.toUpperCase()}</option>
-                        ))}
-                </select>
-
+                }
             </div>
-            <MarketDataUI data={cryptoDatas}/>
+            <MarketDataUI randomData={randomSet} data={cryptoData}/>
         </div>
     )
 }

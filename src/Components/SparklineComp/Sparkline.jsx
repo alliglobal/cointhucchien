@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 
-const GraphLine = ({ data }) => {
+const Sparkline = ({ data }) => {
     const options = {
         chart: {
             sparkline: {
@@ -40,4 +40,4 @@ const GraphLine = ({ data }) => {
     );
 };
 
-export default GraphLine;
+export default Sparkline;

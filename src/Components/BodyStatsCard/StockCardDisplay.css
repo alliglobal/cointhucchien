@@ -3,3 +3,7 @@
 .down{
     color: #FF6666;
 }
+
+.displaycard--hover:hover{
+    background-color: #206ce8;
+}

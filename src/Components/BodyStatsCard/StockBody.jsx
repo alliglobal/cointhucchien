@@ -4,6 +4,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import StockCardDisplay from "./StockCardDisplay.jsx";
 import "./StockBody.css";
+import {ShuffleData} from "../../ToolsFunctions/SortData.jsx";
 
 function StockBody({cryptoDatas}) {
 
@@ -15,7 +16,6 @@ function StockBody({cryptoDatas}) {
                                  price={items.current_price.toLocaleString()}
                                  percent={items.price_change_percentage_24h.toFixed(2)}
                                  image={items.image}
-
         />
     })
 
@@ -58,7 +58,7 @@ function StockBody({cryptoDatas}) {
                 infinite
                 disableDotsControls
                 disableButtonsControls
-                items={itemCard}
+                items={ShuffleData(itemCard)}
                 responsive={responsive}
                 autoPlay
                 autoPlayInterval={500} // Adjust this value to control autoplay speed (e.g., 3000ms for 3 seconds)

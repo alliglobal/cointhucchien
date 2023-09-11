@@ -10,19 +10,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
+    "@ant-design/icons": "^5.2.6",
     "@mui/icons-material": "^5.14.7",
     "@mui/joy": "^5.0.0-beta.4",
     "@mui/material": "^5.14.7",
     "antd": "^5.8.5",
     "apexcharts": "^3.42.0",
-    "chart.js": "^4.4.0",
+    "bootstrap": "^5.3.1",
+    "flowbite-react": "^0.6.0",
     "react": "^18.2.0",
     "react-alice-carousel": "^2.7.1",
     "react-apexcharts": "^1.4.1",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
+    "react-router-dom": "^6.15.0",
+    "react-sparklines": "^1.7.0",
     "swiper": "^10.2.0"
   },
   "devDependencies": {

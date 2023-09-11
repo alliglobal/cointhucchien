@@ -1,5 +1,5 @@
 
-import "./CryptoNewsCard.css"
+import "./CryptoNewsCard.css";
 import { Space, Tag, Image } from 'antd';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -7,38 +7,37 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Chip from '@mui/material/Chip';
+import {UnixTimeConvert} from "../../ToolsFunctions/UnixTime.jsx";
 
-function CryptoNewsCard({data}){
+function CryptoNewsCard({ data }) {
 
-    const keywords = data.keywords ? data.keywords.slice(0, 4) : [];
+    const keywords = data.categories.includes("|") ? data.categories.split("|") : [data.categories];
 
     return (
-        <div className={""}>
-            <Card sx={{ maxWidth: 340}} variant="outlined" className={"crypto-news-card"}>
-                <CardActionArea sx={{height: 400}} className={"bg-blue-500"} >
-                    <CardMedia
-                        className={"max-h-56 card-media"}
-                        component="img"
-                        height="140"
-                        image={data.image_url ? data.image_url : "/no-photo-available.png"}
-                        alt="green iguana"
-                    />
-                    <CardContent>
-                        <Space size={[0, 8]} wrap className={"mb-3 flex"} style={{ rowGap: "5px", columnGap: "5px" }}>
-                            {keywords.map((keyword, index) => (
-                                <Chip key={index} color="primary" variant={"outlined"} label={keyword.toUpperCase()} size="small" />
-                            ))}
-                        </Space>
+        <a href={data.guid} target={"_blank"} rel={"noreferrer"} className={"news--card"}>
 
-                        <Typography gutterBottom variant="h7" component="div" className={""}>
-                            {data.title}
-                        </Typography>
+            <div className={'relative'}>
+                <p className={"timestamp"}>{UnixTimeConvert(data.published_on)}</p>
+            </div>
 
-                    </CardContent>
-                </CardActionArea>
-            </Card>
-        </div>
-    )
+            <div className={"p-3 flex items-center gap-3 bg-neutral-50 hover:bg-neutral-100 mb-3 rounded-lg news--responsive"}>
+                <img className={"lg:w-40 rounded-md img--responsive"} src={data.imageurl} alt={data.title} />
+
+                <div className={"flex-col"}>
+
+                    <Space size={[0, 8]} wrap className={"flex mb-2"} style={{ rowGap: "5px", columnGap: "5px" }}>
+                        {keywords.map((keyword, index) => (
+                            <Chip key={index} color="primary" variant="outlined" label={keyword.toUpperCase()} size="small" />
+                        ))}
+                    </Space>
+                    <h1 className={"font-bold text-2xl"}>{data.title}</h1>
+                    <p className={"text-gray-400 font-light"}>- {data.body.split(" ").splice(0, 50).join(" ")}</p>
+
+                </div>
+            </div>
+        </a>
+
+    );
 }
 
 export default CryptoNewsCard;

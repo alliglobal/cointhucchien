@@ -1,0 +1,30 @@
+
+
+.down{
+    color: #FF6666;
+}
+
+.info--label{
+    font-size: 1.3rem;
+}
+
+.detail--label{
+    font-size: 1rem;
+}
+
+.label--bg{
+    background-color: #FAFAFA;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .btc--info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .detail--label{
+        font-size: 1.1rem;
+    }
+}

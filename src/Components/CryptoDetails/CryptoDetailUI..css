@@ -1,0 +1,23 @@
+
+.crypto--name{
+    font-size: 1.9rem;
+}
+
+.crypto--price{
+    font-size: 2.7rem;
+}
+
+.crypto-label{
+    font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .rating{
+        display: none;
+    }
+
+    .crypto--price{
+        font-size: 2rem;
+    }
+
+}

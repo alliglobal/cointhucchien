@@ -2,10 +2,17 @@
 import { FaArrowTrendUp, FaArrowTrendDown } from "react-icons/fa6";
 import "./StockCardDisplay.css"
 import {Avatar} from "@mui/joy";
+import { useNavigate } from 'react-router-dom';
+
 function StockCardDisplay({id, name, symbol, image, price, percent}){
 
+    const navigate = useNavigate();
+    const onStockClick = (id) => {
+        navigate(`/detail/${id}`);
+    };
+
     return (
-        <div key={id} id={id} className={"flex justify-around items-center card--width bg-blue-500 p-2 rounded-md lg:m-1.5 m-1.5"}>
+        <div onClick={() => onStockClick(id)} key={id} id={id} className={"flex justify-around items-center card--width bg-blue-500 cursor-pointer p-2 rounded-md lg:m-1.5 m-1.5 displaycard--hover"}>
             <div className={"flex items-center gap-2"}>
                 <Avatar alt="Remy Sharp" src={image} />
 

@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 
 export function CryptoDataFetch() {
     const [cryptoData, setCryptoData] = useState([]);
-    const apiKey = "pub_28721ab1ed6729bfc922f16c28c0475b1e35b";
-    const apiUrl = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=cryptocurrency&country=us&size=4`;
+    const apiKey = "5813b005c49c52e18900fda81354e509201269204febec2f114ac1930259ca57";
+    const apiUrl = `https://min-api.cryptocompare.com/data/v2/news/?lang=EN&${apiKey}`;
 
     useEffect(() => {
         async function fetchData() {
@@ -16,7 +16,6 @@ export function CryptoDataFetch() {
                 const data = await response.json();
                 setCryptoData(data);
 
-                // Cache the fetched data with a timestamp
                 const currentTime = Date.now();
                 localStorage.setItem("cryptoNewsData", JSON.stringify(data));
                 localStorage.setItem("cryptoNewsDataTimestamp", currentTime.toString());
@@ -25,7 +24,6 @@ export function CryptoDataFetch() {
             }
         }
 
-        // Check if cached data is available and not older than 5 minutes
         const cachedDataString = localStorage.getItem("cryptoNewsData");
         const cachedTimestampString = localStorage.getItem("cryptoNewsDataTimestamp");
 

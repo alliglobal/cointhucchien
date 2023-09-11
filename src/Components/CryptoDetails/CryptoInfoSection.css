@@ -1,0 +1,10 @@
+
+
+@media not all and (min-width: 1024px) {
+
+    .info--seperator{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
