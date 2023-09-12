@@ -12,7 +12,7 @@ function StockCardDisplay({id, name, symbol, image, price, percent}){
     };
 
     return (
-        <div onClick={() => onStockClick(id)} key={id} id={id} className={"flex justify-around items-center card--width bg-blue-500 cursor-pointer p-2 rounded-md lg:m-1.5 m-1.5 displaycard--hover"}>
+        <div onClick={() => onStockClick(id)} key={id} id={id} className={"shadow flex justify-around items-center card--width bg-blue-500 cursor-pointer p-2 rounded-md lg:m-1.5 m-1.5 displaycard--hover"}>
             <div className={"flex items-center gap-2"}>
                 <Avatar alt="Remy Sharp" src={image} />
 

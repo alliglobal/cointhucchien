@@ -47,7 +47,7 @@ function CryptoTabs(){
     }
 
     return (
-        <NavBarLayout searchData={cryptoDatas}>
+        <NavBarLayout showFooter={true} searchData={cryptoDatas}>
             <div className={"p-3"}>
                 <CryptoDetailUI detailUI={cryptoDetail}/>
 

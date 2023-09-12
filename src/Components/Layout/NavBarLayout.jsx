@@ -8,7 +8,7 @@ function NavBarLayout(props){
         <>
             <NavBarUI searchDatas={props.searchData}/>
             {props.children}
-            <FooterPage />
+            {props.showFooter && <FooterPage />}
         </>
     )
 

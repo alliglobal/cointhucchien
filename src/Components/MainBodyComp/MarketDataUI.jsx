@@ -1,15 +1,11 @@
 
 import React, {useEffect, useState} from 'react';
 import { Space, Table } from 'antd';
-import Sparkline from "../SparklineComp/Sparkline.jsx";
 import {Avatar, Chip} from "@mui/joy";
 import "./MarketDataUI.css"
 import {FaArrowTrendDown, FaArrowTrendUp} from "react-icons/fa6";
-import { Sparklines } from 'react-sparklines';
-import SparklinesLine from "react-sparklines/src/SparklinesLine.js";
+import { Sparklines, SparklinesLine } from 'react-sparklines';
 import { useNavigate } from 'react-router-dom';
-import {ShuffleData} from "../../ToolsFunctions/SortData.jsx";
-
 
 function MarketDataUI({data}) {
 

@@ -20,7 +20,7 @@ function CryptoNewsCard({ data }) {
                 <p className={"timestamp"}>{UnixTimeConvert(data.published_on)}</p>
             </div>
 
-            <div className={"p-3 flex items-center gap-3 bg-neutral-50 hover:bg-neutral-100 mb-3 rounded-lg news--responsive"}>
+            <div className={"p-3 flex items-center gap-3 shadow-md bg-neutral-50 hover:bg-neutral-100 mb-3 rounded-lg news--responsive"}>
                 <img className={"lg:w-40 rounded-md img--responsive"} src={data.imageurl} alt={data.title} />
 
                 <div className={"flex-col"}>

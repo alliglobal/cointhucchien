@@ -1,10 +1,10 @@
 
 import { useEffect, useState } from "react";
 
+
 export function CryptoDataFetch() {
     const [cryptoData, setCryptoData] = useState([]);
-    const apiKey = "5813b005c49c52e18900fda81354e509201269204febec2f114ac1930259ca57";
-    const apiUrl = `https://min-api.cryptocompare.com/data/v2/news/?lang=EN&${apiKey}`;
+    const apiUrl = `https://min-api.cryptocompare.com/data/v2/news/?lang=EN&${process.env.CRYPTO_NEWS_KEY}`;
 
     useEffect(() => {
         async function fetchData() {

@@ -14,16 +14,16 @@ function Footer() {
                             href="https://github.com/oviozz"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-600 hover:text-blue-800"
+                            className="text-blue-500 hover:text-blue-800"
                         >
                             <FaGithub className="inline-block text-xl mr-2" /> GitHub
                         </a>
-                        <span className="text-gray-600 mx-2">|</span>
+                        <span className="text-gray-500 mx-2">|</span>
                         <a
                             href="https://prazwal.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-600 hover:text-blue-800"
+                            className="text-blue-500 hover:text-blue-800"
                         >
                             <RiUser3Line className="inline-block text-xl mr-2" /> Portfolio
                         </a>
@@ -35,7 +35,7 @@ function Footer() {
                             alt="Profile Pic"
                             className="w-10 h-10 rounded-full mr-2"
                         />
-                        <div className="text-blue-600 hover:text-blue-800 text-sm">
+                        <div className="text-blue-500 hover:text-blue-800 text-md">
                             &copy; {new Date().getFullYear()} CryptoView. All rights reserved.
                         </div>
                     </div>

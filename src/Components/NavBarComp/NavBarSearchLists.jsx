@@ -15,7 +15,7 @@ function NavSearchUI(props){
                     <Avatar alt="Remy Sharp" src={props.img} sx={{ width: 40, height: 40 }}/>
 
                     <div className={"price--symbol"}>
-                        <h1 className={"cryptoSearch--price"}>{props.title}</h1>
+                        <h1 className={"cryptoSearch--price font-semibold"}>{props.title}</h1>
                         <h1 className={"text-gray-400"}>{props.symbol}</h1>
                     </div>
                 </div>
@@ -39,7 +39,7 @@ function NavBarSearchLists({searchDatas, closeSearchDraw}){
     if (searchDatas.length === 0) {
         return (
             <div className={"flex flex-col items-center justify-center h-60"}>
-                <img src="/public/no-data.png" alt={"No results found"} className={"w-32"} />
+                <img src="public/no-data.png" alt={"No results found"} className={"w-32"} />
                 <div className="text-center">
                     <h2 className="mt-2 text-3xl font-extrabold text-gray-700">
                         No Results Found

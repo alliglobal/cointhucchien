@@ -10,7 +10,7 @@ function NavBarUI(props) {
 
     return (
         <>
-            <div className={"p-2 flex text-center justify-between lg:justify-between items-center"}>
+            <div className={"p-3 flex text-center justify-between lg:justify-between items-center"}>
                 <Link to={"/"}>
                     <NavBarLogo navTitle={"CryptoView"}/>
                 </Link>

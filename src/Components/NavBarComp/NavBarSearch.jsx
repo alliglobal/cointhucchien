@@ -40,8 +40,8 @@ const NavBarSearch = ({ searchData }) => {
 
     return (
         <>
-            <IconButton onClick={showDrawer} size="small">
-                <SearchRoundedIcon sx={{ fontSize: "2rem", color: "#5f93e8" }} />
+            <IconButton onClick={showDrawer} size="small" disableRipple={true} >
+                <SearchRoundedIcon sx={{ color: "#000000", fontSize: "1.8rem"}} /><h1 className={"text-black "}>Search</h1>
             </IconButton>
 
             <Drawer
@@ -49,7 +49,7 @@ const NavBarSearch = ({ searchData }) => {
                 title={
                     <div className={"flex items-center gap-3"}>
                         <Input
-                            prefix={<SearchRoundedIcon sx={{ fontSize: "1.4em" }} />}
+                            prefix={<SearchRoundedIcon sx={{ fontSize: "1.4em"}} />}
                             placeholder="Crypto Name (example: Bitcoin)"
                             style={{ flex: 4 }}
                             value={searchInput}
