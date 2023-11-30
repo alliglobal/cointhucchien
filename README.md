@@ -1,6 +1,6 @@
 # CryptoView
 
-Live Demo: cryptoz-view.vercel.app/
+Live Demo: [cryptoz-view](https://cryptoz-view.vercel.app/)
 
 
 ![image](https://github.com/oviozz/cryptoView/assets/42685801/8e6560ff-0c6e-4976-a857-acf210372abd)
