@@ -1,7 +1,7 @@
 
 import React, {useEffect, useState} from 'react';
 import { Button, Drawer, Input, Space } from 'antd';
-import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded.js';
 import IconButton from '@mui/material/IconButton';
 import NavBarSearchLists from "./NavBarSearchLists.jsx";
 
