@@ -16,7 +16,8 @@ function Footer() {
                             rel="noopener noreferrer"
                             className="text-blue-500 hover:text-blue-800"
                         >
-                            <FaGithub className="inline-block text-xl mr-2" /> Binance
+                            {/* <FaGithub className="inline-block text-xl mr-2" />  */}
+                            <RiUser3Line className="inline-block text-xl mr-2" /> Binance
                         </a>
                         <span className="text-gray-500 mx-2">|</span>
                         <a
@@ -36,7 +37,7 @@ function Footer() {
                             rel="noopener noreferrer"
                             className="text-blue-500 hover:text-blue-800"
                         >
-                            <FaGithub className="inline-block text-xl mr-2" /> Bybit
+                            <RiUser3Line className="inline-block text-xl mr-2" /> Bybit
                         </a>
                         <span className="text-gray-500 mx-2">|</span>
 

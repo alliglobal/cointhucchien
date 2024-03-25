@@ -75,6 +75,17 @@ function MarketDataUI({data}) {
         },
 
         {
+            title: "Trade",
+            dataIndex: "Bybit"
+                        
+        },
+
+        {
+            title: "Signal",
+            
+        },
+
+        {
             title: "Graph",
             render: (text, record) => (
                 <Sparklines

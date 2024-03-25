@@ -40,7 +40,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: rgba(141, 141, 141, 0.1); /* Add background color for visibility */
+    background-color: rgba(184, 227, 14, 0.1); /* Add background color for visibility */
     color: rgba(128, 128, 128, 0.5); /* Set text color */
     padding: 4px 8px; /* Add padding for spacing */
     border-radius: 0 10px 0 8px; /* Add rounded corners to the top right */

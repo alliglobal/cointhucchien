@@ -13,7 +13,8 @@
 }
 
 .label--bg{
-    background-color: #FAFAFA;
+    /* background-color: #fafafa; */
+    background-color: #30d8f2;
 }
 
 @media only screen and (max-width: 1000px) {
