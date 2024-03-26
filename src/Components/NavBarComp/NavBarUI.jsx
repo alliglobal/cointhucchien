@@ -10,9 +10,9 @@ function NavBarUI(props) {
 
     return (
         <>
-            <div className={"p-3 flex text-center justify-between lg:justify-between items-center"}>
+            <div className={"p-3 flex text-center justify-between lg:justify-between items-center hide--underline"}>
                 <Link to={"/"}>
-                    <NavBarLogo navTitle={"CoinThucChien"}/>
+                    <NavBarLogo/>
                 </Link>
 
                 <NavBarLists searchData={props.searchDatas}/>

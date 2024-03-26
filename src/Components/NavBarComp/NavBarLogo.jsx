@@ -1,15 +1,15 @@
 
 //import {AiOutlineStock} from "react-icons/ai";
+import "./NavBarLogo.css"
+import  fireIcon from "../../assets/fire_icon.jpg"
 
-import {AiFillFire} from "react-icons/ai"
-
-function NavBarLogo({ navTitle }){
+function NavBarLogo(){
 
     return (
-        <h1 className={"flex text-2xl font-bold text-gray-900"}>
-            <AiFillFire size={35} className={"text-red-500"}/>
-            {navTitle}
-        </h1>
+        <div className={"flex text-2xl font-bold text-gray-900 logoContainer"}>
+            <img className={"logo"} src={fireIcon} alt="Logo" />
+            <h3 className={"header"}>CoinThucChien</h3>
+        </div>
     )
 
 }

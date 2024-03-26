@@ -3,9 +3,10 @@ import React, {useEffect, useState} from 'react';
 import { Space, Table } from 'antd';
 import {Avatar, Chip} from "@mui/joy";
 import "./MarketDataUI.css"
+import binanceLogo from "../../assets/binance_logo.png";
 import {FaArrowTrendDown, FaArrowTrendUp} from "react-icons/fa6";
 import { Sparklines, SparklinesLine } from 'react-sparklines';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function MarketDataUI({data}) {
 
@@ -57,7 +58,25 @@ function MarketDataUI({data}) {
             )
         },
         {
-            title: 'Change',
+            title: 'Change 1h',
+            dataIndex: 'change_percent',
+            key: 'change_percent',
+            render: (text, record) => (
+                <div className="hidden md:flex items-center">
+                    {record.price_change_percentage_1h_in_currency < 0 ?
+                        <FaArrowTrendDown style={{color: "FF6666", fontSize:"1rem"}} />
+                        :
+                        <FaArrowTrendUp style={{color: "rgb(134 239 172)", fontSize:"1rem"}} />
+
+                    }
+                    <p className={`${record.price_change_percentage_1h_in_currency < 0 ? "down" : "text-green-300"} crypto-name ml-1`}>{record.price_change_percentage_1h_in_currency.toFixed(2)}%</p>
+                </div>
+            ),
+            responsive: ['md'],
+        },
+
+        {
+            title: 'Change 24h',
             dataIndex: 'change_percent',
             key: 'change_percent',
             render: (text, record) => (
@@ -76,14 +95,17 @@ function MarketDataUI({data}) {
 
         {
             title: "Trade",
-            dataIndex: "Bybit"
-                        
+            render: (text, record) => (
+                <Link to={"https://www.binance.com/en/activity/referral/offers/claim?ref=CPA_008YV3Z82D"}>
+                    <img className={"binance-logo"} src={binanceLogo} alt="Binance" />
+                </Link>
+            )           
         },
 
-        {
-            title: "Signal",
+        // {
+        //     title: "Signal",
             
-        },
+        // },
 
         {
             title: "Graph",
