@@ -61,8 +61,8 @@ function StockBody({cryptoDatas}) {
                 items={ShuffleData(itemCard)}
                 responsive={responsive}
                 autoPlay
-                autoPlayInterval={500} // Adjust this value to control autoplay speed (e.g., 3000ms for 3 seconds)
-                animationDuration={1000} // Adjust this value to control the animation speed (e.g., 800ms)
+                autoPlayInterval={2000} // Adjust this value to control autoplay speed (e.g., 3000ms for 3 seconds)
+                animationDuration={2000} // Adjust this value to control the animation speed (e.g., 800ms)
             />
         </div>
     );

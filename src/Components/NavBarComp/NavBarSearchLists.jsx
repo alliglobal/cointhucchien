@@ -8,7 +8,7 @@ import {useNavigate} from "react-router-dom";
 function NavSearchUI(props){
 
     return (
-        <div className={"mb-3 hover:cursor-pointer"} onClick={() => {props.clickSearch(props.symbol)}}>
+        <div className={"mb-3 hover:cursor-pointer"} onClick={() => {props.clickSearch(props.id)}}>
             <div className={"flex items-center justify-between mb-1 hover:bg-gray-100 rounded-lg"}>
 
                 <div className={"flex items-center gap-3"}>
