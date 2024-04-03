@@ -53,15 +53,15 @@ function CryptoTabs(){
 
                 <Tabs defaultValue={0} size="sm" className={""} sx={tabLightStyle}>
                     <TabList disableUnderline className={"lg:justify-end justify-normal"}>
-                        <Tab variant="soft" color={"primary"} disableIndicator sx={tabStyle}>Chart</Tab>
+                        <Tab variant="soft" color={"primary"} disableIndicator sx={tabStyle}>Insight</Tab>
                         {/* <Tab variant="soft" color={"primary"} disableIndicator sx={tabStyle}>Insight</Tab>
                         <Tab variant="soft" color={"primary"} disableIndicator sx={tabStyle}>Insight</Tab> */}
-                        {cryptoDetail.description.en && <Tab variant="soft" color={"primary"} disableIndicator sx={tabStyle}>Insight</Tab>}
+                        {cryptoDetail.description.en && <Tab variant="soft" color={"primary"} disableIndicator sx={tabStyle}>Chart</Tab>}
                     </TabList>
-                    <TabPanel value={0}>
+                    <TabPanel value={1}>
                         <CryptoPriceChart Spikelinedata={cryptoDetail.market_data.sparkline_7d.price} />
                     </TabPanel>
-                    <TabPanel value={1}>
+                    <TabPanel value={0}>
                         <CryptoDetailSummary detaildata={cryptoDetail}/>
                     </TabPanel>
                 </Tabs>

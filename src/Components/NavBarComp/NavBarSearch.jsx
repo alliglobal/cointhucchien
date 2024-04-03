@@ -50,7 +50,7 @@ const NavBarSearch = ({ searchData }) => {
                     <div className={"flex items-center gap-3"}>
                         <Input
                             prefix={<SearchRoundedIcon sx={{ fontSize: "1.4em"}} />}
-                            placeholder="Crypto Name (example: Bitcoin)"
+                            placeholder="Token Name (ex: BTC)"
                             style={{ flex: 4 }}
                             value={searchInput}
                             onChange={handleInputChange} // Handle input change

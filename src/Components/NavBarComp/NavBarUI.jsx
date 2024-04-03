@@ -15,6 +15,14 @@ function NavBarUI(props) {
                     <NavBarLogo/>
                 </Link>
 
+                <Link to={"/"}>
+                    <NavBarLogo/>
+                </Link>
+
+                <Link to={"/"}>
+                    <NavBarLogo/>
+                </Link>
+
                 <NavBarLists searchData={props.searchDatas}/>
             </div>
             <hr></hr>
