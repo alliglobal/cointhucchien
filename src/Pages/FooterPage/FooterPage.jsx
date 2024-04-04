@@ -21,7 +21,7 @@ function Footer() {
                         </a>
                         <span className="text-gray-500 mx-2">|</span>
                         <a
-                            href="https://www.mexc.com/register?inviteCode=1za2H"
+                            href="https://www.mexc.com/register?inviteCode=1XdZE"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-500 hover:text-blue-800"
