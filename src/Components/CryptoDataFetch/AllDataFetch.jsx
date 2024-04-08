@@ -30,16 +30,16 @@ export function AllDataFetch() {
                 // const response2 = await fetch(apiUrl2);
 
                 
-                // const data = await response.json();
+                const data = await response.json();
 
                 
 
                 // more
-                const response2 = await fetch(apiUrl2);
+                // const response2 = await fetch(apiUrl2);
 
-                if (!response2.ok) {
-                    alert(`Error Fetching Crypto Data ${response2.status}`);
-                }
+                // if (!response2.ok) {
+                //     alert(`Error Fetching Crypto Data ${response2.status}`);
+                // }
 
                 // const response3 = await fetch(apiUrl3);
 
@@ -53,9 +53,9 @@ export function AllDataFetch() {
                 //     alert(`Error Fetching Crypto Data ${response4.status}`);
                 // }
 
-                const data1 = await response.json();
+                // const data1 = await response.json();
 
-                const data2 = await response2.json();
+                // const data2 = await response2.json();
 
                 // const data3 = await response3.json();
 
@@ -65,15 +65,15 @@ export function AllDataFetch() {
                 // console.log("data1", data1);
                 // console.log("data2", data2);
 
-                const data = JSON.parse(JSON.stringify(data1));
+                // const data = JSON.parse(JSON.stringify(data1));
                 
-                data.push(...data2);
+                // data.push(...data2);
 
                 // data.push(...data3);
 
                 // data.push(...data4);
                 
-                // console.log("ket qua",data);
+                console.log("ket qua",data);
 
                 // const result = JSON.parse(JSON.stringify(response1));
                 

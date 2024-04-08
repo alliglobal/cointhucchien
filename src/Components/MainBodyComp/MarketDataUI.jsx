@@ -75,23 +75,23 @@ function MarketDataUI({data}) {
             responsive: ['md'],
         },
 
-        {
-            title: 'Change 24h',
-            dataIndex: 'change_percent',
-            key: 'change_percent',
-            render: (text, record) => (
-                <div className="hidden md:flex items-center">
-                    {record.price_change_percentage_24h < 0 ?
-                        <FaArrowTrendDown style={{color: "FF6666", fontSize:"1rem"}} />
-                        :
-                        <FaArrowTrendUp style={{color: "rgb(134 239 172)", fontSize:"1rem"}} />
+        // {
+        //     title: 'Change 24h',
+        //     dataIndex: 'change_percent',
+        //     key: 'change_percent',
+        //     render: (text, record) => (
+        //         <div className="hidden md:flex items-center">
+        //             {record.price_change_percentage_24h < 0 ?
+        //                 <FaArrowTrendDown style={{color: "FF6666", fontSize:"1rem"}} />
+        //                 :
+        //                 <FaArrowTrendUp style={{color: "rgb(134 239 172)", fontSize:"1rem"}} />
 
-                    }
-                    <p className={`${record.price_change_percentage_24h < 0 ? "down" : "text-green-300"} crypto-name ml-1`}>{record.price_change_percentage_24h.toFixed(2)}%</p>
-                </div>
-            ),
-            responsive: ['md'],
-        },
+        //             }
+        //             <p className={`${record.price_change_percentage_24h < 0 ? "down" : "text-green-300"} crypto-name ml-1`}>{record.price_change_percentage_24h.toFixed(2)}%</p>
+        //         </div>
+        //     ),
+        //     responsive: ['md'],
+        // },
 
         {
             title: "Trade",

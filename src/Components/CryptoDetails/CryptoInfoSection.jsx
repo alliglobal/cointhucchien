@@ -17,6 +17,8 @@ function DataPoint({ title, value }) {
 
 function CryptoInfoSection({ infoData }) {
 
+    console.log("InfoSection",infoData)
+
     if (!infoData || typeof infoData !== 'object') {
         return <div>No data available</div>;
     }
@@ -33,15 +35,19 @@ function CryptoInfoSection({ infoData }) {
                     <h1 className={"font-bold info--label"}>{infoData.symbol} Info:</h1>
                 </div>
 
+                
+
                 <DataPoint title="Market Cap" value={infoData.market_data.market_cap.usd || 'N/A'} />
-                <DataPoint title="Valuation" value={infoData.market_data.fully_diluted_valuation?.usd || 'N/A'} />
+                {/* <DataPoint title="Valuation" value={infoData.market_data.fully_diluted_valuation?.usd || 'N/A'} /> */}
+                {/* <DataPoint title="Valuation" value={infoData.genesis_date || 'N/A'} /> */}
                 <DataPoint title="Total Volume" value={infoData.market_data.total_volume?.usd || 'N/A'} />
                 <DataPoint title="High 24h" value={infoData.market_data.high_24h?.usd || 'N/A'} />
                 <DataPoint title="Price Change 24h" value={infoData.market_data.price_change_percentage_24h || 'N/A'} />
+                {/* <DataPoint title="HomePage" value={infoData.links.homepage|| 'N/A'} /> */}
 
             </div>
         </div>
     );
-}
+}9
 
 export default CryptoInfoSection;

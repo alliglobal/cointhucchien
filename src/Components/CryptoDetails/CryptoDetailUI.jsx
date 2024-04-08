@@ -1,15 +1,14 @@
-
 import React, { useEffect, useRef } from "react";
 import { FaArrowTrendDown, FaArrowTrendUp } from "react-icons/fa6";
 import { Avatar } from "@mui/joy";
 import "./CryptoDetailUI..css"
 import Chip from '@mui/joy/Chip';
 import CryptoPriceChart from "./CryptoPriceChart.jsx";
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder.js';
-import BookmarkIcon from '@mui/icons-material/Bookmark.js';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 import Badge from '@mui/material/Badge';
-import StarRoundedIcon from '@mui/icons-material/StarRounded.js';
-import StarOutlineRoundedIcon from '@mui/icons-material/StarOutlineRounded.js';
+import StarRoundedIcon from '@mui/icons-material/StarRounded';
+import StarOutlineRoundedIcon from '@mui/icons-material/StarOutlineRounded';
 
 function CryptoDetailUI({detailUI}) {
 

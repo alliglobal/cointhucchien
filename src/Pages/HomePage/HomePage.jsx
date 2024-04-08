@@ -27,11 +27,11 @@ function HomePage(){
                     </Spin>
                 </div>
                 <div className={"lg:w-1/4 lg:-mt-7 w-5/6"} style={{ position: 'fixed', top: '55%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
-                    <Alert
+                    {/* <Alert
                         message={<h1 className={"text-1xl"}>Loading...</h1>}
                         description={<p className={"text-gray-700"}>Keep calm</p>}
                         type="info"
-                    />
+                    /> */}
                 </div>
             </NavBarLayout>
         );
